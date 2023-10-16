@@ -1,0 +1,43 @@
+<%- include(views+'includes/start.ejs') %>
+    <%- include(views+'includes/head.ejs') %>
+        <%- include(views+'includes/navigation.ejs') %>
+
+            <main>
+                <div class="products-section">                  
+                    <div class="container">
+                        <div class="section-header my-5">
+                            <h2 class="text-center position-relative pb-3 mb-3  ">Admin Products</h2>
+                        </div>
+                        <% if (products && products.length>0) { %>
+                        <div class="row">                      
+                                <% products.forEach(product => { %>
+                                    <div class="col-4 mb-3">
+                                        <div class="product-section overflow-hidden  shadow rounded-4 text-center">
+                                            <div class="product-image">
+                                                <img class="img-fluid" src=<%= product.imageURL %>  alt="">
+                                            </div>
+                                            <div class="product-detail py-4 ">
+                                                <h2 class="my-2 fw-bold"><%= product.price %> $</h2>
+                                            <p><%= product.description %></p>
+                                            <div class="actions text-center">
+                                                <button class="btn btn-outline-success ">Add to Cart</button>
+                                                <button class="btn btn-outline-secondary ">Show</button>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <% }) %>
+                        </div>
+                        <% } else {%>
+                            <div class="no-content-found text-center p-4 my-5">
+                                <div class="container">
+                                    <img class="img-fluid" src="https://dlinkmea.com/images/no-product.png" alt="" width="400" height="400">
+                                </div>
+                            </div>
+                        <% } %>
+                    </div>
+                </div>
+            </main>
+
+    <%- include(views+'includes/script.ejs') %>
+<%- include(views+'includes/end.ejs') %>

@@ -1,0 +1,30 @@
+<%- include(views+'includes/start.ejs') %>
+    <%- include(views+'includes/head.ejs') %>
+        <%- include(views+'includes/navigation.ejs') %>
+
+        <main>
+            <div class="pannel-section">
+                <div class="container">
+                    <div class="section-header my-5">
+                        <h2 class="text-center position-relative pb-3 mb-3  ">Admin Panel
+                        </h2>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-3 ">
+                            <div class="pannel-option position-relative overflow-hidden shadow rounded-3">
+                                <div class="pannel-image">
+                                    <img class="img-fluid" src=https://img.freepik.com/premium-vector/collection-3d-sport-icon-collection-isolated-blue-sport-recreation-concept_112554-929.jpg alt="">
+                                </div>
+                                <div class="pannel-action w-100 text-center position-absolute top-50 end-0 translate-middle-y">
+                                    <a class="btn btn-primary rounded-pill shadow" href="/admin/addproduct">Add Products</a>
+                                </div>
+                            </div>
+                        </div>  
+                       
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    <%- include(views+'includes/script.ejs') %>
+<%- include(views+'includes/end.ejs') %>

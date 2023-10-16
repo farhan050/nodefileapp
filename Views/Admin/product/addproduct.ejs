@@ -1,0 +1,42 @@
+<%- include(views+'includes/start.ejs') %>
+    <%- include(views+'includes/head.ejs') %>
+        <%- include(views+'includes/navigation.ejs') %>
+
+        <main>
+            <div class="addproduct-form">
+                <div class="container">
+                    <div class="section-header my-5">
+                        <h2 class="text-center position-relative pb-3 mb-3  ">Add Product
+                        </h2>
+                    </div>
+                    <form class="border p-4 rounded-3" action="/admin/addproduct" method="post">
+                        <div class="form-group my-3">
+                            <label for="title" class="form-label">Title</label>
+                             <input type="text" class="form-control" name="title" id="title" placeholder="Title">
+                        </div>
+                        <div class="form-group my-3">
+                            <label for="description" class="form-label">Description</label>
+                             <textarea type="description" class="form-control" name="description" id="description" placeholder="Description"></textarea>
+                        </div>
+                        <div class="form-group my-3">
+                            <label for="price" class="form-label">Price</label>
+                            <input type="number" step="0.01" class="form-control" name="price" id="price" placeholder="0.00">
+                        </div>
+                        <div class="form-group my-3">
+                            <label for="imageURL" class="form-label">Image URL</label>
+                             <input type="text" class="form-control" name="imageURL" id="imageURL" placeholder="https://">
+                        </div>
+                        <div class="form-group my-3">
+                            <label for="bannerimageURL" class="form-label">Banner Image URL</label>
+                             <input type="text" class="form-control" name="bannerimageURL" id="bannerimageURL" placeholder="https://">
+                        </div>
+                        <div class="action my-4 text-center">
+                            <button class="btn btn-success" type="submit">Add Product</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+         <%- include(views+'includes/script.ejs') %>
+<%- include(views+'includes/end.ejs') %>
